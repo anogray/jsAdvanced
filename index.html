@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Js</title>
+</head>
+<body>
+<!-- <script src="proto_prototype.js"></script> -->
+<!-- <script src="pollyfill.js"></script> -->
+<!-- <script src="reusableMethods.js"></script> -->
+<script src="hoisting.js"></script>
+
+<script>
+    function myFunction(e) {
+        const currObj = e
+        const callingScript = e.id.slice(1)
+        console.log("called",callingScript);
+        let script = document.createElement('script');
+        window.href
+        script.src = `${callingScript}.js`;
+        document.write(script.outerHTML);
+            
+ 
+
+        // if(li.)
+    }
+
+</script>
+
+<li  id="#proto_prototype" onclick="myFunction(this)">
+    __proto__ and prototype
+</li>
+
+<!-- <a href="proto_prototype.js" target="_blank">
+    __proto__ and prototype</a>  -->
+
+<li id="#pollyfill" onclick="myFunction(this)">
+PolyFill
+</li>
+
+<li id="#reusableMethods" onclick="myFunction(this)">
+Invocation Methods
+</li>
+
+<button>Click anyone list item in console tab </button>
+</body>
+</html>
