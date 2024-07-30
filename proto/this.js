@@ -22,7 +22,7 @@ function Person(){
 // }
 
 
-// const me = new Person();
+const me = new Person();
 
 //not to use arrow function
 this.globalObj = "globalObj"
@@ -36,7 +36,7 @@ const meObj = {
     }
 }
 
-console.log("fxnVsArrow",meObj, meObj.talk(), meObj.arrowTalk())
+// console.log("fxnVsArrow",meObj, meObj.talk(), meObj.arrowTalk())
 
 
 
