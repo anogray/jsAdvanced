@@ -32,6 +32,7 @@ const arr = [
 const res = arr.filter((x)=>x.age<20).map((x)=>x.firstname+" "+x.lastname);
 console.log(res)
 
+
 //reduce method
 
 // const result = arr.reduce(function logic(acc,curr){
@@ -49,3 +50,10 @@ const result = arr.reduce((acc,curr)=>{
 },[])
 
 console.log(result)
+
+const showNames = function(item){
+  return item.firstname;
+}
+
+const resultNames = arr.map(showNames);
+console.log({resultNames})

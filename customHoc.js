@@ -50,7 +50,7 @@ function customMapFxn() {
   // prints [100,400,900,1600]
   console.log(squaredArray);
 }
-// customMapFxn();
+//customMapFxn();
 
 function customFilterFxn() {
   if (!Array.prototype.customFilter) {
@@ -59,6 +59,7 @@ function customFilterFxn() {
       // iterate array elements
       for (let item of this) {
         // pass each element to callback and if elements that pass the test push response to new array
+        //const evens = numbers.customFilter((item) => {return item % 2 === this.threshold}, context);
         if (callback.call(context, item)) {
           newArray.push(item);
         }
@@ -72,8 +73,19 @@ function customFilterFxn() {
   const numbers = [1, 2, 3, 4];
   // call custom filter() on array to filter even numbers
   const evens = numbers.customFilter((item) => item % 2 === 0);
+  
+  //here conext is undefined still work as callback.call(context=undefined, 4) and we used (item) => {return item % 2==0})
+
+  // call custom filter() with using as context
+  const context ={ threshold:0};
+  // const evens = numbers.customFilter((item) => {return item % 2 === this.threshold}, context);
+  //herer this with arrowe doesn't work so function below to bind this
+  // const evens = numbers.customFilter(function(item){return item % 2 === this.threshold}, context);
+  //callback.call(context, 4) // equivalent to: function(item) { return item > this.threshold; }.call({ threshold: 2 }, 4)
+  
+  
   // prints [2,4]
   console.log(evens);
 }
 
-// customFilterFxn();
+//customFilterFxn();
