@@ -54,5 +54,5 @@ class DBConnection {
   console.log("con1: "+con1.conString);
   console.log("con2: "+con2.conString);
 
-console.log("con1===con2: "+con1===con2,
+console.log("con1===con2: ",con1===con2,
 DBConnection.getInstance('mysqldb1')===DBConnection.getInstance('mysqldb2'));  
