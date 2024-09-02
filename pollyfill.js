@@ -16,8 +16,9 @@ Function.prototype.bind = function(context,...args) {
     return function(...newArgs) {
         console.log("checknewArgs",{newArgs},fn,{args},{context})
       // Use `apply` to call the function with the bound context and combined arguments
-    //   return fn.apply(context, args.concat(newArgs));
-      return fn.apply(context, [...args, ...newArgs]);
+      return fn.apply(context, args.concat(newArgs));
+      return fn.apply(context, [...args, ...newArgs]);// return fn.call(context, ...allArgs); (call methjod needs paramters not array)
+      // return fn.call(context, ...[...args, ...newArgs]);
     };
   };
 
